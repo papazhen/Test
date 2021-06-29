@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="测试套件">
+    <test name="简单测试" preserve-order="true">
+        <classes>
+            <class name="testngreport.TestGroup">
+                <methods>
+                    <include name="testCase1" />
+                    <include name="testCase2" />
+                    <include name="testCase3" />
+                    <include name="testCase5" />
+                    <include name="testCase4" />
+                    <include name="logDemo" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <listeners>
+<!--        <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter"></listener>&lt;!&ndash;testng自带的报告，写死的！！！！&ndash;&gt;-->
+        <listener class-name="listener.ExtentTestNGIReporterListener"></listener><!--导入监听类！！！！-->
+    </listeners>
+
+</suite>
+
+<!--    <suite name="测试套件">-->
+<!--        <test name="简单测试">-->
+<!--            <groups>-->
+<!--                <run>-->
+<!--                <include name="functiontest"/>-->
+<!--                    <exclude name="systemtest"></exclude>-->
+<!--                </run>-->
+<!--            </groups>-->
+<!--        </test>-->
+<!--    </suite>-->
